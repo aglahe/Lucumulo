@@ -1,0 +1,12 @@
+Accumulo Backing for Lucene
+===========================
+
+Project Team:
+
+- Chris White (chriswhite199)
+- Mark Dooley
+
+Overview
+========
+
+Loosely based upon the infoq.com document http://www.infoq.com/articles/LuceneHbase, this is an attempt to port this approach to using Accumulo (http://incubator.apache.org/accumulo/) as the backend for a Lucene Index (http://lucene.apache.org) 
