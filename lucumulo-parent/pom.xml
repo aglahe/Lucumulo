@@ -5,7 +5,7 @@
 	<artifactId>lucumulo-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Lucumulo</name>
+	<name>Lucumulo Parent</name>
 	<url>https://github.com/chriswhite199/Lucumulo</url>
 	<description>Loosely based upon the infoq.com document http://www.infoq.com/articles/LuceneHbase, this is an attempt to port this approach to using Accumulo (http://incubator.apache.org/accumulo/) as the backend for a Lucene Index (http://lucene.apache.org) </description>
 
@@ -60,5 +60,6 @@
 	<modules>
 		<module>model</module>
 		<module>accumulo-dao</module>
+		<module>lucene</module>
 	</modules>
 </project>
