@@ -1,7 +1,9 @@
 package org.lucumulo.model;
 
+import java.util.Map.Entry;
+
 /**
- * An indexed document with fielkd content and deleted flag
+ * An indexed document with field content and deleted flag
  */
 public interface IndexedDocumentContent {
 	/**
@@ -16,9 +18,15 @@ public interface IndexedDocumentContent {
 	 * 
 	 * @param field
 	 *            Field name to get value for
-	 * @return Field value, or null if no content available for field
+	 * @return Field content value, or null if no content available for field
 	 */
-	public String getFieldValue(String field);
+	public IndexedDocumentContentField getFieldContent(String field);
+
+	/**
+	 * @return Iterate over the field name / content value pairs for this
+	 *         document
+	 */
+	public Iterable<Entry<String, IndexedDocumentContentField>> getFieldContents();
 
 	/**
 	 * @return whether this document has been marked as deleted

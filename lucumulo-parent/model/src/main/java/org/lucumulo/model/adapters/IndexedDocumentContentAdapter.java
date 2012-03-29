@@ -1,9 +1,11 @@
 package org.lucumulo.model.adapters;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import org.lucumulo.model.IndexedDocumentContent;
+import org.lucumulo.model.IndexedDocumentContentField;
 
 /**
  * Simple implementation of {@link IndexedDocumentContent}
@@ -11,7 +13,7 @@ import org.lucumulo.model.IndexedDocumentContent;
 public class IndexedDocumentContentAdapter implements IndexedDocumentContent {
 	protected long documentId;
 
-	protected Map<String, String> fieldValues = new TreeMap<String, String>();
+	protected Map<String, IndexedDocumentContentField> fieldValues = new TreeMap<String, IndexedDocumentContentField>();
 
 	protected boolean isDeleted;
 
@@ -25,11 +27,11 @@ public class IndexedDocumentContentAdapter implements IndexedDocumentContent {
 	}
 
 	@Override
-	public String getFieldValue(String field) {
+	public IndexedDocumentContentField getFieldContent(String field) {
 		return fieldValues.get(field);
 	}
 
-	public void setFieldValue(String field, String value) {
+	public void setFieldValue(String field, IndexedDocumentContentField value) {
 		fieldValues.put(field, value);
 	}
 
@@ -42,4 +44,8 @@ public class IndexedDocumentContentAdapter implements IndexedDocumentContent {
 		this.isDeleted = isDeleted;
 	}
 
+	@Override
+	public Iterable<Entry<String, IndexedDocumentContentField>> getFieldContents() {
+		return fieldValues.entrySet();
+	}
 }

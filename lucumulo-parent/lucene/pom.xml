@@ -8,4 +8,16 @@
   </parent>
   <artifactId>lucumulo-lucene</artifactId>
   <name>Lucene bindings</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.lucene</groupId>
+  		<artifactId>lucene-core</artifactId>
+  		<version>3.5.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.lucumulo</groupId>
+  		<artifactId>lucumulo-dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
