@@ -1,9 +1,9 @@
 package org.lucumulo.model;
 
 /**
- * An indexed document
+ * An indexed document with fielkd content and deleted flag
  */
-public interface IndexedDocument {
+public interface IndexedDocumentContent {
 	/**
 	 * Get the document id
 	 * 

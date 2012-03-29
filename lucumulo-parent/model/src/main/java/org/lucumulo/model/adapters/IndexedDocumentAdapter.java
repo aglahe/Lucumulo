@@ -3,12 +3,12 @@ package org.lucumulo.model.adapters;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.lucumulo.model.IndexedDocument;
+import org.lucumulo.model.IndexedDocumentContent;
 
 /**
- * Simple implementation of {@link IndexedDocument}
+ * Simple implementation of {@link IndexedDocumentContent}
  */
-public class IndexedDocumentAdapter implements IndexedDocument {
+public class IndexedDocumentAdapter implements IndexedDocumentContent {
 	protected long documentId;
 
 	protected Map<String, String> fieldValues = new TreeMap<String, String>();

@@ -1,11 +1,11 @@
 package org.lucumulo.model.adapters;
 
-import org.lucumulo.model.IndexedTerm;
+import org.lucumulo.model.IndexedDocumentTerm;
 
 /**
- * Simple implementation for {@link IndexedTerm}
+ * Simple implementation for {@link IndexedDocumentTerm}
  */
-public class IndexedTermAdapter implements IndexedTerm {
+public class IndexedTermAdapter implements IndexedDocumentTerm {
 	protected String field;
 	protected String term;
 	protected long documentId;
